@@ -1,0 +1,104 @@
+:root {
+    --color-text: #024f22;
+    --color-heading: #024f22;
+    --color-link: #024f22;
+    --color-link-hover: #3673f7;
+    --color-accent: #35A6FF;
+    --color-accent-opacity: rgba(121, 179, 255, 0.25);
+    --color-less-important: #888888;
+    --color-scroll-bar: #d0d0d0;
+
+    --color-bg-primary: #ececec;
+
+    --ff-body: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    --ff-heading: "Antonio", Helvetica, Arial, Verdana, sans-serif;
+
+    --height-banner: 59px; 
+}  
+
+body {
+    background-color: var(--color-bg-primary);
+    background-image: url(../images/backgrounds/white.jpg);
+    color: var(--color-text);
+    font-family: var(--ff-body);
+    font-size: 100%;
+    font-weight: 400;
+    padding-right: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-heading);
+    font-family: var(--ff-heading);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+h1.static-h1 {
+    font-size: 5.25rem !important;
+}
+
+h1 {
+    font-size: 5.25rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-top: 50px;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 2rem;
+    padding: 6px 12px 4px 12px;
+}
+
+h6 {
+    font-size: 1.125rem;
+}
+
+hr {
+    border: 0.075rem solid var(--color-less-important);
+}
+
+main {
+    height: 100%;
+}
+
+section {
+    padding-block: 0;
+}
+
+p {
+    font-size: 1.275rem;
+    color: var(--color-text);
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    font-size: 1.15rem;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+}
+
+.important {
+    font-weight: bold;
+}
+
+.less-important, .less-important a {
+    color: var(--color-less-important);
+    font-size: 0.85rem;
+}
+
+.less-important a:hover {
+    color: var(--color-link-hover);
+}
