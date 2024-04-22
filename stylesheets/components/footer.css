@@ -1,0 +1,9 @@
+#scroll-by-anim {
+    height: 500px;
+}
+
+@media (max-width: 1023px) {
+    #scroll-by-anim {
+        height: 250px;
+    }
+}

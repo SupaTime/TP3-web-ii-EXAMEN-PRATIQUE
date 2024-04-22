@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
+
+@import url(root.css);
+@import url(components/mobile-changer.css);
+@import url(components/header.css);
+@import url(components/card.css);
+@import url(components/footer.css);
+@import url(components/navbar.css);
+
+
+
+/* Odd/White Section's Theme */
+
+body section {
+    background-image: url(../images/backgrounds/white.jpg);
+}
+
+/* Even/Green Section's Theme */
+
+body section:nth-child(even) {
+    background-image: url(../images/backgrounds/green.webp);
+}
+
+
+/* button */ /* ---Je pouvais pas le mettre dans son propre fishier css, car bootstrap overide des chose et c'est vraiment gossant. je pourais load le fishier button.css dans le html pour le fix mais jveux pas mettre trop d'affaire dans mon <head>--- */
+
+button {
+    position: relative;
+    background-image: url(../images/backgrounds/white.jpg);
+    border: 2px solid var(--color-text);
+    border-radius: 50px;
+    box-shadow: 2px 2px #55555579;
+    color: var(--color-text);
+    flex-shrink: 0;
+    flex-grow: 0;
+    font-weight: bold;
+    overflow: hidden;
+    line-height: 1rem;
+    padding: 1.15rem;
+    padding-inline: 1.75rem;
+    font-size: 1.3rem;
+    z-index: 1;
+}
+
+button.green-bg-anim:hover {
+    border-color: #ececec;
+    color: #ececec;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+button.green-bg-anim:before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/backgrounds/green_light.jpg);
+    width: 200%;
+    height: 100%;
+    top: 175%;
+    left: -25%;
+    rotate: -20deg;
+    transition: top 0.3s, left 0.3s, rotate 0.3s;
+    z-index: -1;
+}
+
+button.green-bg-anim:hover:before {
+    top: 0;
+    left: 0;
+    rotate: 0deg;
+}
+
+button.round-btn { 
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+button.small-btn {
+    line-height: 1rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+button.smaller-btn {
+    line-height: 0.75rem;
+    padding: 0.50rem;
+    font-size: 0.75rem;
+}
+
+button.blue-btn {
+    border-color: #ececec;
+    color: #ececec;
+    background-image: url(../images/backgrounds/blue.jpg);
+}
+
+button.green-btn {
+    border: none;
+    color: #ececec;
+    background-image: url(../images/backgrounds/green.webp);
+}
+
+button.blue-btn-hover:hover {
+    background-image: url(../images/backgrounds/blue.jpg);
+}
+
+button.inverse-blue-btn {
+    border-color: #119dff;
+    color: #119dff;
+    background-image: url(../images/backgrounds/white.jpg);
+}
+
+button.close-btn {
+    padding-block: 0.85rem;
+}
+
+button.white-btn-border {
+    border: 3px solid #fff;
+}
+
+button.link-alike-btn {
+    background: none;
+    border: none;
+    padding: 16px;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 1rem;
+}
+
+button.link-alike-btn:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+    button.small-btn {
+        line-height: 0.75rem;
+        padding: 0.50rem;
+        font-size: 0.75rem;
+    }
+    
+    button.smaller-btn {
+        line-height: 0.55rem;
+        padding: 0.30rem;
+        font-size: 0.55rem;
+    }
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-scroll-bar);
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-less-important);
+}
+
+/* Scroll Background Anim */
+body section.sliding-bg {
+    position: relative;
+    overflow: hidden;
+    width: 100vw; 
+    height: 100vh;
+}
+
+body img.sliding-bg {
+    position: absolute;
+    overflow: hidden;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    min-width: 1400px;
+    flex-shrink: 0;
+    background-image: url('');
+    background-size: cover;
+    transform: var(--transform-value, translateY(-250px));
+}
+
+@media (max-width: 1200px) {
+    body section.sliding-bg {
+        max-height: 1100px;
+    }
+}
+
+@media (min-width: 600px) {
+    body img.sliding-bg {
+        top: 0;
+    }
+}
+
+/* Toast */
+body header #more-recipes-toast {
+    color: var(--color-text);
+    background-image: url(../images/backgrounds/white.jpg);
+}
+
+body header #more-recipes-toast a {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+body header #more-recipes-toast a:hover {
+    color: var(--color-link-hover);
+}
+
+/* Links */
+a.static-blue-link {
+    color: var(--color-link-hover);
+}

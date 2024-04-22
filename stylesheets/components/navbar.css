@@ -1,0 +1,27 @@
+section nav.navbar {
+    background-image: url(../../images/backgrounds/white.jpg);
+    padding-right: 0 !important;
+}
+
+button#searchButton.border-bottom, button#searchButton.border-bottom p {
+    color: var(--color-text);
+    border-color: var(--color-text) !important;
+    transition: color, 0.4s;
+}
+
+button#searchButton.border-bottom:hover, button#searchButton.border-bottom:hover p {
+    color: var(--color-link-hover);
+    border-color: var(--color-link-hover) !important;
+}
+
+button#login:hover {
+    color: var(--color-link-hover);
+}
+
+button#grocery-list:hover {
+    color: var(--color-link-hover);
+}
+
+button#my-recipes:hover {
+    color: var(--color-link-hover);
+}

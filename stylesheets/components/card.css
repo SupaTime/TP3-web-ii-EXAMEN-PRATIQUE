@@ -1,0 +1,35 @@
+.card {
+    border: none;
+    background: none;
+}
+
+.card-body p, .card-body span {
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+/* Card Animation */
+body .card-anim, .card-anim img, .card-anim button {
+    transition: rotate, 0.4s,transform 0.4s;
+}
+
+body .card-anim:hover {
+    transform: rotate(3deg);
+}
+
+body .card-anim:hover button {
+    transform: rotate(-3deg);
+}
+
+body .card-anim:hover img {
+    transform: rotate(-1deg) scale(1.1);
+}
+
+/* Big Card Animation */
+body .big-card-anim img {
+    transition: transform 0.4s;
+}
+
+body .big-card-anim:hover img {
+    transform: scale(1.1);
+}
