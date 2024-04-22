@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hidden Valley© Recepies</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/b91e85d5ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="stylesheets/quickstart/quickstart.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/section-theme.js" defer></script>
+    <script src="scripts/sliding-bg-animation.js" defer></script>
+    <script src="scripts/sliding-text-animation.js" defer></script>
+    <script src="scripts/cards.js" defer></script>
+    
+</head>
+<body>
+    <section>
+        <nav class="navbar fixed-top">
+            <div class="container-xl d-flex flex-row justify-content-between">
+
+                <div class="offcanvas offcanvas-top" tabindex="-1" id="recipes" aria-labelledby="offcanvasTopLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasTopLabel">Recipes</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        a
+                    </div>
+                </div>
+
+                <div class="offcanvas offcanvas-top" tabindex="-1" id="products" aria-labelledby="offcanvasTopLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasTopLabel">Products</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        b
+                    </div>
+                </div>
+
+                <div class="offcanvas offcanvas-top" tabindex="-1" id="ranchShop" aria-labelledby="offcanvasTopLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasTopLabel">Ranch Shop</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        c
+                    </div>
+                </div>
+
+                <div class="offcanvas offcanvas-top" tabindex="-1" id="rewards" aria-labelledby="offcanvasTopLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasTopLabel">Rewards</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        d
+                    </div>
+                </div>
+
+                <div class="offcanvas offcanvas-top" tabindex="-1" id="inspiration" aria-labelledby="offcanvasTopLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasTopLabel">Inspiration</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        e
+                    </div>
+                </div>
+
+                <div class="d-none d-xl-flex flex-row flex-shrink-0 pt-3">
+                    <button class="link-alike-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#recipes" aria-controls="offcanvasTop">Recipes</button>
+                    <button class="link-alike-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#products" aria-controls="offcanvasTop">Products</button>
+                    <button class="link-alike-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#ranchShop" aria-controls="offcanvasTop">Ranch Shop</button>
+                    <button class="link-alike-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#rewards" aria-controls="offcanvasTop">Rewards</button>
+                    <button class="link-alike-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#inspiration" aria-controls="offcanvasTop">Inspiration</button>
+                </div>
+
+                <a href="index.html" class="d-flex flex-shrink-0"><img src="images/logos/ranch-image.jpg" alt="" style="width: 88px;" draggable="false"></a>
+
+                <div class="d-flex flex-row gap-3 align-items-end">
+    
+                    <button id="searchButton" class="d-flex flex-row border-0 p-1 shadow-none align-items-end gap-2 border-bottom border-2 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchOffcanvas" aria-controls="searchOffcanvas">
+                        <span class="d-none d-xxl-block" style="font-size: 1rem;">Search Hidden Valley</span>
+                        <i class="fa-solid fa-magnifying-glass "></i>
+                    </button>
+
+                    <a href="" class="static-blue-link d-none d-sm-block" style="font-size: 1rem;">Join our rewards program</a>
+
+                    <div class="d-none d-xl-flex flex-row gap-3 align-items-end">
+                        <button id="login" class="border-0 p-1 shadow-none">
+                            <i class="fa-regular fa-user"></i>
+                        </button>
+                        <button id="grocery-list" class="border-0 p-1 shadow-none">
+                            <i class="fa-solid fa-list-check"></i>
+                        </button>
+                        <button id="my-recipes" class="border-0 p-1 shadow-none">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+                    </div>
+                    <button class="d-block d-xl-none border-0 p-0 shadow-none" style="font-size: 1.15rem;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <img src="images/logos/ranch-image.jpg" alt="" style="width: 88px;" draggable="false">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ps-4">
+                            <li class="nav-item">
+                                <button class="link-alike-btn ps-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#recipes" aria-controls="offcanvasTop">Recipes</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="link-alike-btn ps-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#products" aria-controls="offcanvasTop">Products</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="link-alike-btn ps-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#ranchShop" aria-controls="offcanvasTop">Ranch Shop</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="link-alike-btn ps-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#rewards" aria-controls="offcanvasTop">Rewards</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="link-alike-btn ps-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#inspiration" aria-controls="offcanvasTop">Inspiration</button>
+                            </li>
+
+                            <li class="nav-item d-flex flex-wrap flex-row align-items-end gap-3 mt-4">
+                                <button id="login" class="border-0 ps-0 p-1 shadow-none">
+                                    <i class="fa-regular fa-user"></i>
+                                </button>
+                                <button id="grocery-list" class="border-0 p-1 shadow-none">
+                                    <i class="fa-solid fa-list-check"></i>
+                                </button>
+                                <button id="my-recipes" class="border-0 p-1 shadow-none">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+        <main class="container-xl px-4">
+            <header class="pb-sm-5 mb-sm-5 pb-3 mb-3">
+                <div class="col-xl-6">
+                    <h1 class="mt-5 pt-5">Hello!</h1> <h1 class="pb-5 mb-3">Let's Cook</h1>
+                    <p>Looking for ranch recipes? You’ve come to the right place! Explore our collection of Hidden Valley® Ranch recipes — perfect for snacking, meals or anytime you’re craving some HVR.</p>
+                </div>
+
+                <nav id="nav-buttons" class="d-flex flex-sm-row flex-column justify-content-sm-between pt-5 mt-5">
+                    <div class="nav-item d-flex flex-row gap-2">
+                        <button id="searchButton" class="d-none d-sm-block round-btn green-bg-anim" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchOffcanvas" aria-controls="searchOffcanvas">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="searchOffcanvas" aria-labelledby="searchOffcanvasLabel">
+                            <div class="offcanvas-header d-flex justify-content-end">
+                                <button type="button" class="round-btn green-bg-anim blue-btn close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <form class="d-flex mt-3" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <button id="filter-btn" class="green-bg-anim" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas" aria-controls="filterOffcanvas">
+                            Filter <i class="fa-solid fa-sliders" style="height: 0.95rem;"></i>
+                        </button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="filterOffcanvas" aria-labelledby="filterOffcanvasLabel">
+                            <div class="offcanvas-header d-flex justify-content-between">
+                                <h5 class="offcanvas-title" id="filterOffcanvasLabel">Filters</h5>
+                                <button type="button" class="round-btn green-bg-anim blue-btn close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                b
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <div class="dropdown">
+                            <button id="sort-by-btn" class="dropdown-toggle green-bg-anim mt-sm-0 mt-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sort by
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                
+                <hr class="my-4">
+        
+                <h3>Popular Filters</h3>
+                <nav id="filters" class="d-flex flex-row overflow-x-auto mt-5 pt-0 gap-sm-3 gap-1">
+                    <button id="search" class="small-btn blue-btn green-bg-anim">Chicken</button>
+                    <button id="search" class="small-btn blue-btn green-bg-anim">Appetizers</button>
+                    <button id="search" class="small-btn blue-btn green-bg-anim">Kid-Friendly</button>
+                    <button id="search" class="small-btn blue-btn green-bg-anim">Snack</button>
+                    <button id="search" class="small-btn blue-btn green-bg-anim">Quick & Easy</button>
+                    <button id="search" class="small-btn blue-btn green-bg-anim">Dinner</button>
+                    <button id="search" class="small-btn blue-btn green-bg-anim">Vegetarian</button>
+                    <button id="search" class="small-btn blue-btn green-bg-anim">Vegan</button>
+                    <button id="search" class="small-btn blue-btn green-bg-anim">Leftovers</button>
+                    <button id="search" class="small-btn blue-btn green-bg-anim">Frozen Vegetable</button>
+                    <button id="search" class="small-btn blue-btn green-bg-anim">Dips</button>
+                    <button id="search" class="small-btn blue-btn green-bg-anim">Beef</button>
+                    <button id="search" class="small-btn blue-btn green-bg-anim">Slow Cooker</button>
+                </nav>
+    
+                <hr class="my-4">
+    
+            </header>
+    
+            <div id="recipe-gallery-container">
+                <div id="reversable" class="d-lg-flex flex-row-reverse justify-content-center justify-content-lg-between pt-sm-5 mt-sm-5 pt-3 mt-3 px-0">
+
+                    <div class="col-lg-6 row">
+                        <div id="card-2-container" class="d-flex flex-row align-items-start justify-content-between">
+
+                        </div>
+                        <div id="card-2-container" class="d-flex flex-row align-items-center justify-content-between">
+                            
+                        </div>
+                    </div>
+
+                    <div id="card-big-container" class="col-lg-6 mt-4 mt-lg-0 pe-lg-4">
+                        
+                    </div>
+                </div>
+
+
+
+                <div class="d-lg-flex py-5 px-0 mb-5">
+                    <div id="card-2-container" class="d-flex flex-row align-items-center justify-content-between me-lg-4 me-0">
+                        
+                    </div>
+
+                    <div id="card-2-container" class="d-flex flex-row align-items-center justify-content-between ms-lg-4 ms-0">
+                        
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </section>
+    
+    <section>
+        <main class="container-xl px-4 pb-5">
+            <header class="py-5 mb-4">
+                <div id="more-recipes-toast" class="toast align-items-center border-0 rounded-5 w-100 mt-sm-5" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="d-flex">
+                        <div class="toast-body p-4 px-5">
+                            <h2 class="mt-0">Want More Trending Recipes?</h2>
+                            <p>Receive the latest trending Ranch recipes in your inbox. <a href="https://www.hiddenvalley.com/my-account/login/">Sign Up For Our Newsletter.</a></p>
+                        </div>
+                        <button type="button" class="green-btn close-btn round-btn me-3 mt-3 m-auto p-1 py-2" data-bs-dismiss="toast" aria-label="Close"><i class="fa-solid fa-xmark px-1"></i></button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 d-flex flex-column align-items-lg-start align-items-center">
+                        <p class="mt-4 pt-4 text-lg-center">Meal Plan Inspiration</p>
+                        <h1 class="text-center text-lg-start">Taste What's</h1> <h1 class="pb-sm-5 pb-3 mb-3">Trending</h1>
+                        <p class="text-lg-start text-center">Ranchify your meals with this weeks' hottest recipes - two trending, two seasonal and one delish dish you can make in your favorite countertop cooker!</p>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-lg-end mt-3">
+                        <button class="inverse-blue-btn green-bg-anim">Save to Meal Plan<i class="fa-regular fa-calendar ps-4"></i></button>
+                    </div>
+                </div>
+            </header>
+
+            <div id="card-slide-show-container" class="d-flex flex-nowrap py-4 gap-3 overflow-x-auto">
+                
+            </div>
+        </main>
+    </section>
+
+    <section>
+        <main class="container-xl px-4">
+            <div id="recipe-gallery-container" class="mt-sm-5 pt-sm-5 pt-4 mt-4">
+                <div id="reversable" class="d-lg-flex justify-content-center justify-content-lg-between pt-sm-5 mt-sm-5 pt-3 mt-3 px-0">
+
+                    <div class="col-lg-6 row">
+                        <div id="card-2-container" class="d-flex flex-row align-items-start justify-content-between">
+
+                        </div>
+                        <div id="card-2-container" class="d-flex flex-row align-items-center justify-content-between">
+                            
+                        </div>
+                    </div>
+
+                    <div id="card-big-container" class="col-lg-6 mt-4 mt-lg-0 ps-lg-4">
+                        
+                    </div>
+                </div>
+
+
+
+                <div class="d-lg-flex py-5 px-0 mb-5">
+                    <div id="card-2-container" class="d-flex flex-row align-items-center justify-content-between me-lg-4 me-0">
+                        
+                    </div>
+
+                    <div id="card-2-container" class="d-flex flex-row align-items-center justify-content-between ms-lg-4 ms-0">
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </section>
+
+    <section>
+        <main class="container-xl px-4 pb-5">
+            <header class="py-5 mb-4">
+                <div class="row">
+                    <div class="col-lg-6 d-flex flex-column align-items-lg-start align-items-center">
+                        <p class="mt-4 pt-4 text-lg-center">Meal Plan Inspiration</p>
+                        <h1 class="text-center text-lg-start">Taste What's</h1> <h1 class="pb-sm-5 pb-3 mb-3">Trending</h1>
+                        <p class="text-lg-start text-center">Ranchify your meals with this weeks' hottest recipes - two trending, two seasonal and one delish dish you can make in your favorite countertop cooker!</p>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-lg-end mt-3">
+                        <button class="inverse-blue-btn green-bg-anim">Save to Meal Plan<i class="fa-regular fa-calendar ps-4"></i></button>
+                    </div>
+                </div>
+            </header>
+
+            <div id="card-slide-show-container" class="d-flex flex-nowrap py-4 gap-3 overflow-x-auto">
+                
+                
+            </div>
+        </main>
+    </section>
+
+    <section>
+        <main class="container-xl px-4">
+            <div id="recipe-gallery-container" class="mt-sm-5 pt-sm-5 pt-4 mt-4">
+                <div id="reversable" class="d-lg-flex flex-row-reverse justify-content-center justify-content-lg-between pt-sm-5 mt-sm-5 pt-3 mt-3 px-0">
+
+                    <div class="col-lg-6 row">
+                        <div id="card-2-container" class="d-flex flex-row align-items-start justify-content-between">
+
+                        </div>
+                        <div id="card-2-container" class="d-flex flex-row align-items-center justify-content-between">
+                            
+                        </div>
+                    </div>
+
+                    <div id="card-big-container" class="col-lg-6 mt-4 mt-lg-0 pe-lg-4">
+                        
+                    </div>
+                </div>
+
+
+
+                <div class="d-lg-flex py-5 px-0 mb-5">
+                    <div id="card-2-container" class="d-flex flex-row align-items-center justify-content-between me-lg-4 me-0">
+                        
+                    </div>
+
+                    <div id="card-2-container" class="d-flex flex-row align-items-center justify-content-between ms-lg-4 ms-0">
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </section>
+
+
+    <section>
+        <div class="modal fade" id="embed" tabindex="-1" aria-labelledby="embedLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered my-0">
+                <div class="modal-content d-flex align-items-end border-0" style="background: none;">
+                    <div class="modal-header border-0">
+                        <button class="round-btn blue-btn green-bg-anim p-2 p-md-3" type="button" class="btn-close" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="modal-body w-100 h-100">
+                        <iframe style="width: 100%; height: 70vh;" src="https://www.youtube.com/embed/c323EhVp6gQ" title="Ranch Carbonara" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+        <main class="container-xl px-4 d-flex justify-content-center">
+            <header class="col-12 col-md-10 d-flex flex-column align-items-center pt-5">
+                <p class="text-center">Featured Recipe Video</p>
+                <h2 class="text-center my-2 pb-3 pb-md-5">Easy Ranch Spaghetti Carbonara</h2>
+                <div id="showVideoButton" class="rounded-5 position-relative overflow-hidden" type="button" data-bs-toggle="modal" data-bs-target="#embed">
+                    <img src="images/temp-images/easy-ranch-spaghetti-carbonara-RDP.jpg" alt="">
+                    <button class="round-btn blue-btn green-bg-anim position-absolute start-50 top-50 translate-middle" ><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="col-12 col-sm-8 col-lg-6 d-flex flex-column justify-content-center py-3 py-md-5 mb-5">
+                    <p class="text-center">Your taste buds will think they’ve gone to flavor heaven. Rich, creamy noodles covered in ranchy goodness tossed with fresh green peas and the mother of all deliciousness — BACON!</p>
+                    <button class="inverse-blue-btn green-bg-anim mt-4" type="button" data-bs-toggle="modal" data-bs-target="#embed">See recipe <i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </header>
+        </main>
+    </section>
+
+    <section>
+        <main class="container-xl px-4">
+            <div id="recipe-gallery-container" class="mt-sm-5 pt-sm-5 pt-4 mt-4">
+                <div id="reversable" class="d-lg-flex justify-content-center justify-content-lg-between pt-sm-5 mt-sm-5 pt-3 mt-3 px-0">
+
+                    <div class="col-lg-6 row">
+                        <div id="card-2-container" class="d-flex flex-row align-items-start justify-content-between">
+
+                        </div>
+                        <div id="card-2-container" class="d-flex flex-row align-items-center justify-content-between">
+                            
+                        </div>
+                    </div>
+
+                    <div id="card-big-container" class="col-lg-6 mt-4 mt-lg-0 ps-lg-4">
+                        
+                    </div>
+                </div>
+
+
+
+                <div class="d-lg-flex py-5 px-0 mb-5">
+                    <div id="card-2-container" class="d-flex flex-row align-items-center justify-content-between me-lg-4 me-0">
+                        
+                    </div>
+
+                    <div id="card-2-container" class="d-flex flex-row align-items-center justify-content-between ms-lg-4 ms-0">
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </section>
+
+    <section class="sliding-bg overflow-hidden">
+        <img class="sliding-bg" src="images/backgrounds/sliding-bg-img.webp" alt="">
+        <main class="position-absolute d-flex align-items-center justify-content-center w-100">
+            <div class="d-flex flex-column align-items-center justify-content-center col-6 text-center">
+                <h1>The Most Delicious RewardsProgram On The Planet.</h1>
+                <p class="important mb-3 mt-5">It’s easy to earn rewards: Just keep doing what you’re doing — checking out recipes, reviewing them and sharing.</p>
+                <button class="inverse-blue-btn green-bg-anim mt-4">Ranchology Rewards</button>
+            </div>
+        </main>
+    </section>
+
+    <section>
+        <header id="scroll-by-anim" class="overflow-hidden d-flex align-items-center">
+            <div class="text-wrapper d-flex flex-row flex-nowrap gap-5">
+                <div class="text d-flex flex-row flex-shrink-0">
+                    <h1 class="static-h1">Only Serious About Flavor</h1> 
+                    <div id="flag" class="d-flex justify-content-end align-items-end pb-1 ps-3">
+                        <svg style="width: 95px;" viewBox="0 0 50 33" xmlns="http://www.w3.org/2000/svg"><title>flag</title><path style="fill: rgb(0, 92, 197);" d="m8.8785 1.46208c0-.808263-.676-1.46208-1.51169-1.46208-.83568 0-1.51168.653817-1.51168 1.46208 0 .49422.25549.92667.63874 1.18923l-6.49387 29.59169h1.43184l6.45129-29.41151c.58019-.20078.99537-.73619.99537-1.36941z"></path><path style="fill: rgb(0, 92, 197);" d="m45.6927 12.6182c.9871-.4386.6741-1.9139-.406-1.9139h-15.0894c-.6351 0-1.1093-.5843-.9786-1.20576l.146-.69423c.1307-.62148-.3435-1.20578-.9786-1.20578h-6.6772c-.6351 0-1.1093-.58439-.9785-1.20591l.1081-.51386c.1308-.62152-.3435-1.20591-.9786-1.20591h-10.44496c-.47298 0-.88127.33137-.9786.79422l-3.4037 16.18643c-.15915.7568.56433 1.4001 1.29739 1.1536l10.25377-3.4488c.5826-.196 1.1552.3212 1.0193.9207-.1368.604.4448 1.1224 1.0292.9173l7.4451-2.6132c.5835-.2048 1.1667.3069 1.0394.9121-.1332.6336.5073 1.1515 1.0989.8886z"></path></svg>
+                    </div>
+                </div>
+                <div class="text d-flex flex-row flex-shrink-0">
+                    <h1 class="static-h1">Only Serious About Flavor</h1> 
+                    <div id="flag" class="d-flex justify-content-end align-items-end pb-1 ps-3">
+                        <svg style="width: 95px;" viewBox="0 0 50 33" xmlns="http://www.w3.org/2000/svg"><title>flag</title><path style="fill: rgb(0, 92, 197);" d="m8.8785 1.46208c0-.808263-.676-1.46208-1.51169-1.46208-.83568 0-1.51168.653817-1.51168 1.46208 0 .49422.25549.92667.63874 1.18923l-6.49387 29.59169h1.43184l6.45129-29.41151c.58019-.20078.99537-.73619.99537-1.36941z"></path><path style="fill: rgb(0, 92, 197);" d="m45.6927 12.6182c.9871-.4386.6741-1.9139-.406-1.9139h-15.0894c-.6351 0-1.1093-.5843-.9786-1.20576l.146-.69423c.1307-.62148-.3435-1.20578-.9786-1.20578h-6.6772c-.6351 0-1.1093-.58439-.9785-1.20591l.1081-.51386c.1308-.62152-.3435-1.20591-.9786-1.20591h-10.44496c-.47298 0-.88127.33137-.9786.79422l-3.4037 16.18643c-.15915.7568.56433 1.4001 1.29739 1.1536l10.25377-3.4488c.5826-.196 1.1552.3212 1.0193.9207-.1368.604.4448 1.1224 1.0292.9173l7.4451-2.6132c.5835-.2048 1.1667.3069 1.0394.9121-.1332.6336.5073 1.1515 1.0989.8886z"></path></svg>
+                    </div>
+                </div>
+                <div class="text d-flex flex-row flex-shrink-0">
+                    <h1 class="static-h1">Only Serious About Flavor</h1> 
+                    <div id="flag" class="d-flex justify-content-end align-items-end pb-1 ps-3">
+                        <svg style="width: 95px;" viewBox="0 0 50 33" xmlns="http://www.w3.org/2000/svg"><title>flag</title><path style="fill: rgb(0, 92, 197);" d="m8.8785 1.46208c0-.808263-.676-1.46208-1.51169-1.46208-.83568 0-1.51168.653817-1.51168 1.46208 0 .49422.25549.92667.63874 1.18923l-6.49387 29.59169h1.43184l6.45129-29.41151c.58019-.20078.99537-.73619.99537-1.36941z"></path><path style="fill: rgb(0, 92, 197);" d="m45.6927 12.6182c.9871-.4386.6741-1.9139-.406-1.9139h-15.0894c-.6351 0-1.1093-.5843-.9786-1.20576l.146-.69423c.1307-.62148-.3435-1.20578-.9786-1.20578h-6.6772c-.6351 0-1.1093-.58439-.9785-1.20591l.1081-.51386c.1308-.62152-.3435-1.20591-.9786-1.20591h-10.44496c-.47298 0-.88127.33137-.9786.79422l-3.4037 16.18643c-.15915.7568.56433 1.4001 1.29739 1.1536l10.25377-3.4488c.5826-.196 1.1552.3212 1.0193.9207-.1368.604.4448 1.1224 1.0292.9173l7.4451-2.6132c.5835-.2048 1.1667.3069 1.0394.9121-.1332.6336.5073 1.1515 1.0989.8886z"></path></svg>
+                    </div>
+                </div>
+                <div class="text d-flex flex-row flex-shrink-0">
+                    <h1 class="static-h1">Only Serious About Flavor</h1> 
+                    <div id="flag" class="d-flex justify-content-end align-items-end pb-1 ps-3">
+                        <svg style="width: 95px;" viewBox="0 0 50 33" xmlns="http://www.w3.org/2000/svg"><title>flag</title><path style="fill: rgb(0, 92, 197);" d="m8.8785 1.46208c0-.808263-.676-1.46208-1.51169-1.46208-.83568 0-1.51168.653817-1.51168 1.46208 0 .49422.25549.92667.63874 1.18923l-6.49387 29.59169h1.43184l6.45129-29.41151c.58019-.20078.99537-.73619.99537-1.36941z"></path><path style="fill: rgb(0, 92, 197);" d="m45.6927 12.6182c.9871-.4386.6741-1.9139-.406-1.9139h-15.0894c-.6351 0-1.1093-.5843-.9786-1.20576l.146-.69423c.1307-.62148-.3435-1.20578-.9786-1.20578h-6.6772c-.6351 0-1.1093-.58439-.9785-1.20591l.1081-.51386c.1308-.62152-.3435-1.20591-.9786-1.20591h-10.44496c-.47298 0-.88127.33137-.9786.79422l-3.4037 16.18643c-.15915.7568.56433 1.4001 1.29739 1.1536l10.25377-3.4488c.5826-.196 1.1552.3212 1.0193.9207-.1368.604.4448 1.1224 1.0292.9173l7.4451-2.6132c.5835-.2048 1.1667.3069 1.0394.9121-.1332.6336.5073 1.1515 1.0989.8886z"></path></svg>
+                    </div>
+                </div>
+                <div class="text d-flex flex-row flex-shrink-0">
+                    <h1 class="static-h1">Only Serious About Flavor</h1> 
+                    <div id="flag" class="d-flex justify-content-end align-items-end pb-1 ps-3">
+                        <svg style="width: 95px;" viewBox="0 0 50 33" xmlns="http://www.w3.org/2000/svg"><title>flag</title><path style="fill: rgb(0, 92, 197);" d="m8.8785 1.46208c0-.808263-.676-1.46208-1.51169-1.46208-.83568 0-1.51168.653817-1.51168 1.46208 0 .49422.25549.92667.63874 1.18923l-6.49387 29.59169h1.43184l6.45129-29.41151c.58019-.20078.99537-.73619.99537-1.36941z"></path><path style="fill: rgb(0, 92, 197);" d="m45.6927 12.6182c.9871-.4386.6741-1.9139-.406-1.9139h-15.0894c-.6351 0-1.1093-.5843-.9786-1.20576l.146-.69423c.1307-.62148-.3435-1.20578-.9786-1.20578h-6.6772c-.6351 0-1.1093-.58439-.9785-1.20591l.1081-.51386c.1308-.62152-.3435-1.20591-.9786-1.20591h-10.44496c-.47298 0-.88127.33137-.9786.79422l-3.4037 16.18643c-.15915.7568.56433 1.4001 1.29739 1.1536l10.25377-3.4488c.5826-.196 1.1552.3212 1.0193.9207-.1368.604.4448 1.1224 1.0292.9173l7.4451-2.6132c.5835-.2048 1.1667.3069 1.0394.9121-.1332.6336.5073 1.1515 1.0989.8886z"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="px-2 px-xl-4 mx-xl-4 d-flex justify-content-center">
+            <div class="col-xxl-10">
+                <footer>
+
+                    <hr class="my-4">
+    
+                    <div class="d-flex flex-wrap align-items-center justify-content-xl-between justify-content-center my-5">
+                        <h3 class="mb-4 m-xl-0 text-center">Ready to receive fun recipes, tips, offers and more in your inbox?</h3>
+                        <a class="flex-shrink-0 flex-grow-0" href="https://www.hiddenvalley.com/my-account/login/"><button class="blue-btn green-bg-anim">Sign Up For Our Newsletter</button></a>
+                    </div>
+                    
+                    <hr class="my-4">
+
+                    <div class="d-none d-xl-block">
+                        <div class="d-flex flex-row align-items-start justify-content-center gap-3">
+                            <div class="container-fluid">
+                                <h6 class="py-3">Top Recipes</h6>
+                                <div class="d-flex flex-column gap-3">
+                                    <a href="">Kid Friendly Ranch Sweet Potato Crisps & Works of Art</a>
+                                    <a href="">Kid Friendly Ranch Mac‘n Cheese With Math</a>
+                                    <a href="">How to Make a Ranch Cheese Quesadilla for Kids</a>
+                                    <a href="">Buffalo Ranch Chicken Dip (Baked or Slow Cooker)</a>
+                                    <a href="">Original Ranch® Spinach Dip</a>
+                                    <a href="">Ranch Mac‘n Cheese – Creamy</a>
+                                    <a href="">Nashville Hot Chicken Sandwich</a>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <h6 class="py-3">Top Collections</h6>
+                                <div class="d-flex flex-column gap-3">
+                                    <a href="">Cheezy Ranch Collection</a>
+                                    <a href="">Garlic Ranch Recipes</a>
+                                    <a href="">Green Goddess Ranch Recipes</a>
+                                    <a href="">Fresh</a>
+                                    <a href="">Parmesan Ranch Recipes</a>
+                                    <a href="">Double Ranch: Bottled & Dry Ranch Seasoning</a>
+                                    <a href="">Vegetarian Recipes</a>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <h6 class="py-3">Site</h6>
+                                <div class="d-flex flex-column gap-3">
+                                    <a href="">Recipes</a>
+                                    <a href="">Products</a>
+                                    <a href="">Hidden Valley Ranch Shop</a>
+                                    <a href="">Ranchology® Rewards</a>
+                                    <a href="">Inspiration</a>
+                                    <a href="">Frequently Asked Questions</a>
+                                    <a href="">Shipping Info</a>
+                                    <a href="">Sign In/Register</a>
+                                    <a href="">Sitemap</a>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <h6 class="py-3">Family Brands</h6>
+                                <div class="d-flex flex-column gap-3">
+                                    <a href="">Glad®</a>
+                                    <a href="">KC Masterpiece®</a>
+                                    <a href="">Kingsford®</a>
+                                    <a href="">Soy Vay®</a>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <h6 class="py-3">Socials</h6>
+                                <div class="d-flex flex-column gap-3">
+                                    <a href="">Instagram</a>
+                                    <a href="">Youtube</a>
+                                    <a href="">Twitter</a>
+                                    <a href="">Pinterest</a>
+                                    <a href="">Facebook</a>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <h6 class="py-3">Company</h6>
+                                <div class="d-flex flex-column gap-3">
+                                    <a href="">About Us</a>
+                                    <a href="">Contact Us</a>
+                                    <a href="">Privacy Policy</a>
+                                    <a href="">Terms of Use (Recently Updated)</a>
+                                    <a href="">Careers</a>
+                                    <a href="">Ranchology Terms & Conditions</a>
+                                    <a href="">Ranchology Sweepstakes Rules</a>
+                                    <a href="">Hidden Valley Kitchens (Foodservice)</a>
+                                    <a href="">Cookie Settings</a>
+                                    <a href="">Your Privacy Choices</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-block d-xl-none">
+                        <div class="container-fluid">
+                            <button class="d-flex flex-row align-items-center justify-content-between overflow-visible border-0 shadow-none p-0 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#top-recipes" aria-expanded="false" aria-controls="collapseExample">
+                                <h6 class="py-3">Top Recipes</h6>
+                                <i class="fa-solid fa-angle-right pt-1"></i>
+                            </button>
+                            <div class="collapse" id="top-recipes">
+                                <div class="card card-body d-flex flex-column gap-3">
+                                    <a href="">Kid Friendly Ranch Sweet Potato Crisps & Works of Art</a>
+                                    <a href="">Kid Friendly Ranch Mac‘n Cheese With Math</a>
+                                    <a href="">How to Make a Ranch Cheese Quesadilla for Kids</a>
+                                    <a href="">Buffalo Ranch Chicken Dip (Baked or Slow Cooker)</a>
+                                    <a href="">Original Ranch® Spinach Dip</a>
+                                    <a href="">Ranch Mac‘n Cheese – Creamy</a>
+                                    <a href="">Nashville Hot Chicken Sandwich</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <button class="d-flex flex-row align-items-center justify-content-between overflow-visible border-0 shadow-none p-0 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#top-collections" aria-expanded="false" aria-controls="collapseExample">
+                                <h6 class="py-3">Top Collections</h6>
+                                <i class="fa-solid fa-angle-right pt-1"></i>
+                            </button>
+                            <div class="collapse" id="top-collections">
+                                <div class="card card-body d-flex flex-column gap-3">
+                                    <a href="">Cheezy Ranch Collection</a>
+                                    <a href="">Garlic Ranch Recipes</a>
+                                    <a href="">Green Goddess Ranch Recipes</a>
+                                    <a href="">Fresh</a>
+                                    <a href="">Parmesan Ranch Recipes</a>
+                                    <a href="">Double Ranch: Bottled & Dry Ranch Seasoning</a>
+                                    <a href="">Vegetarian Recipes</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <button class="d-flex flex-row align-items-center justify-content-between overflow-visible border-0 shadow-none p-0 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#site" aria-expanded="false" aria-controls="collapseExample">
+                                <h6 class="py-3">Site</h6>
+                                <i class="fa-solid fa-angle-right pt-1"></i>
+                            </button>
+                            <div class="collapse" id="site">
+                                <div class="card card-body d-flex flex-column gap-3">
+                                    <a href="">Recipes</a>
+                                    <a href="">Products</a>
+                                    <a href="">Hidden Valley Ranch Shop</a>
+                                    <a href="">Ranchology® Rewards</a>
+                                    <a href="">Inspiration</a>
+                                    <a href="">Frequently Asked Questions</a>
+                                    <a href="">Shipping Info</a>
+                                    <a href="">Sign In/Register</a>
+                                    <a href="">Sitemap</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <button class="d-flex flex-row align-items-center justify-content-between overflow-visible border-0 shadow-none p-0 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#family-brands" aria-expanded="false" aria-controls="collapseExample">
+                                <h6 class="py-3">Family Brands</h6>
+                                <i class="fa-solid fa-angle-right pt-1"></i>
+                            </button>
+                            <div class="collapse" id="family-brands">
+                                <div class="card card-body d-flex flex-column gap-3">
+                                    <a href="">Glad®</a>
+                                <a href="">KC Masterpiece®</a>
+                                <a href="">Kingsford®</a>
+                                <a href="">Soy Vay®</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <button class="d-flex flex-row align-items-center justify-content-between overflow-visible border-0 shadow-none p-0 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#socials" aria-expanded="false" aria-controls="collapseExample">
+                                <h6 class="py-3">Socials</h6>
+                                <i class="fa-solid fa-angle-right pt-1"></i>
+                            </button>
+                            <div class="collapse" id="socials">
+                                <div class="card card-body d-flex flex-column gap-3">
+                                    <a href="">Instagram</a>
+                                    <a href="">Youtube</a>
+                                    <a href="">Twitter</a>
+                                    <a href="">Pinterest</a>
+                                    <a href="">Facebook</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <button class="d-flex flex-row align-items-center justify-content-between overflow-visible border-0 shadow-none p-0 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#company" aria-expanded="false" aria-controls="collapseExample">
+                                <h6 class="py-3">Company</h6>
+                                <i class="fa-solid fa-angle-right pt-1"></i>
+                            </button>
+                            <div class="collapse" id="company">
+                                <div class="card card-body d-flex flex-column gap-3">
+                                    <a href="">About Us</a>
+                                    <a href="">Contact Us</a>
+                                    <a href="">Privacy Policy</a>
+                                    <a href="">Terms of Use (Recently Updated)</a>
+                                    <a href="">Careers</a>
+                                    <a href="">Ranchology Terms & Conditions</a>
+                                    <a href="">Ranchology Sweepstakes Rules</a>
+                                    <a href="">Hidden Valley Kitchens (Foodservice)</a>
+                                    <a href="">Cookie Settings</a>
+                                    <a href="">Your Privacy Choices</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="d-flex flex-row align-items-start justify-content-between py-4">
+                        <div class="col-6">
+                            <h6 class="less-important">Accessibility Statement:</h6>
+                            <p class="less-important mt-2">Hidden Valley Ranch is committed to making its website accessible for all users, and will continue to take all steps necessary to ensure compliance with applicable laws.</p>
+                            <p class="less-important mt-2">If you have difficulty accessing any content, feature or functionality on our website or on our other electronic platforms, please call us at 1-877-853-7262 so that we can provide you access through an alternative method.</p>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <h6 class="less-important">The HV Food Products Company. All Rights Reserved</h6>
+                        </div>
+                    </div>
+
+
+                </footer>
+            </div>
+        </main>
+    </section>
+</body>
+</html>
